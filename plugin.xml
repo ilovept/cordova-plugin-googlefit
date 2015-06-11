@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="de.ilpt.plugins.googlefit"
+	version="0.0.1">
+
+	<name>cordova-plugin-googlefit</name>
+	<description>Cordova plugin for Google Fit</description>
+
+	<keywords>cordova,googlefit,healthkit</keywords>
+	<repo>https://github.com/ilovept/cordova-plugin-googlefit.git</repo>
+	<issue>https://github.com/ilovept/cordova-plugin-googlefit/issues</issue>
+
+	<js-module src="www/googlefit.js" name="googlefit">
+		<clobbers target="navigator.googlefit" />
+	</js-module>
+	
+	<!-- android -->
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="GoogleFit" >
+				<param name="android-package" value="de.ilpt.plugins.googlefit.GoogleFit"/>
+			</feature>
+		</config-file>
+
+		<source-file src="src/android/GoogleFit.java" target-dir="src/de/ilpt/plugins/googlefit" />
+	</platform>
+
+</plugin>

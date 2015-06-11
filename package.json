@@ -1,0 +1,20 @@
+{
+	"name": "cordova-plugin-googlefit",
+	"version": "0.0.1",
+	"description": "Cordova plugin for Google Fit",
+	"cordva": {
+		"id": "de.ilpt.plugins.googlefit",
+		"platforms": [ "android" ]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ilovept/cordova-plugin-googlefit.git"
+	},
+	"keywords": [
+		"cordova",
+		"cordova-android",
+		"ecosystem:cordova",
+		"googlefit",
+		"healthkit"
+	]
+}
