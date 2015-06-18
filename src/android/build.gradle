@@ -1,0 +1,43 @@
+
+apply plugin: 'com.android.application'
+
+buildscript {
+	repositories {
+		mavenCentral()
+	}
+}
+
+android {
+	compileSdkVersion 22
+	buildToolsVersion "22.0.1"
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_6
+		targetCompatibility JavaVersion.VERSION_1_6
+	}
+
+	defaultConfig {
+		minSdkVersion 15
+		targetSdkVersion 22
+	}
+
+	sourceSets {
+		main {
+			manifest.srcFile 'AndroidManifest.xml'
+			java.srcDirs = [
+				'../../node_modules/cordova-android/framework/src',
+				'java'
+			]
+		}
+	}
+
+	lintOptions {
+		lintConfig file('lint.xml')
+//		abortOnError false
+	}
+
+	dependencies {
+		compile 'com.google.android.gms:play-services-fitness:7.5.0'
+	}
+
+}

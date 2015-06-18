@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="MissingApplicationIcon,AllowBackup">
+        <ignore path="AndroidManifest.xml" />
+    </issue>
+
+    <issue id="all">
+        <ignore regexp=".*node_modules.*" />
+    </issue>
+</lint>

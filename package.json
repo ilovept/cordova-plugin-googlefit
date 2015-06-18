@@ -16,5 +16,8 @@
 		"ecosystem:cordova",
 		"googlefit",
 		"healthkit"
-	]
+	],
+	"devDependencies": {
+		"cordova-android": "~4.0.2"
+	}
 }
