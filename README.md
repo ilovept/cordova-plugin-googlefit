@@ -24,6 +24,16 @@ For more information please read the [Google Fit Getting Started on Android](htt
 
 ## Prepare your project
 
+### Install plugin
+
+	cordova plugin add https://github.com/ilovept/cordova-plugin-googlefit.git
+
+Or, while developing:
+
+	cordova plugin rm de.ilpt.plugins.googlefit && cordova plugin add ../cordova-plugin-googlefit
+
+### Add Google Play Services dependency
+
 Within your cordova android project create or extend the file
 `platforms/android/build-extras.gradle`
 with the [Google Play Services](https://developers.google.com/android/guides/setup)
