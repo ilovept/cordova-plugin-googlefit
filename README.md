@@ -110,13 +110,14 @@ command with the tag `GoogleFit` so you can filter all relevant debug informatio
 
 Or, if you want debug Cordova too:
 
-	adb logcat -s CordovaActivity:d CordovaApp:d CordovaWebViewImpl:d CordovaInterfaceImpl:d CordovaBridge:d PluginManager:d Config:d GoogleFit:d
+	adb logcat -s GoogleFit:d CordovaActivity:d CordovaApp:d CordovaWebViewImpl:d CordovaInterfaceImpl:d CordovaBridge:d PluginManager:d Config:d
 
 
 ## Development
 
-To build this plugin you need the Cordova Plugin downloaded with NPM: `npm install`
+To build this project locally you need the Cordova Framework for Android which could
+be easy downloaded via npm. Just run `npm install`. After that you can import the
+project also with Android Studio.
 
-After that you can build and verified it, incl. [Android Lint](http://developer.android.com/tools/debugging/improving-w-lint.html),
+You can build and verified it, incl. [Android Lint](http://developer.android.com/tools/debugging/improving-w-lint.html),
 with `./gradlew build`.
-
