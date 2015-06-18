@@ -1,5 +1,4 @@
 
-apply plugin: 'android'
 apply plugin: 'com.android.application'
 
 buildscript {
@@ -43,7 +42,6 @@ android {
 }
 
 dependencies {
-	compile 'com.google.android.gms:play-services-fitness:7.5.0+'
-    compile "com.android.support:appcompat-v7:21.0.3"
+	compile 'com.google.android.gms:play-services-fitness:7.5.0'
     compile fileTree(dir: 'libs', include: ['*.jar'])
 }
