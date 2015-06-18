@@ -1,14 +1,49 @@
+
+apply plugin: 'android'
+apply plugin: 'com.android.application'
+
 buildscript {
     repositories {
         jcenter()
-        mavenCentral()
-        mavenLocal()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.1.3'
-
-        // replace with the current version of the android-apt plugin
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+        classpath 'com.android.tools.build:gradle:1.0.0'
     }
+}
+
+android {
+	compileSdkVersion 22
+	buildToolsVersion "22.0.1"
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_6
+		targetCompatibility JavaVersion.VERSION_1_6
+	}
+
+	defaultConfig {
+		minSdkVersion 15
+		targetSdkVersion 22
+	}
+
+	sourceSets {
+		main {
+			manifest.srcFile 'src/android/AndroidManifest.xml'
+			java.srcDirs = [
+				'src/android/java',
+				'node_modules/cordova-android/framework/src'
+			]
+		}
+	}
+
+	lintOptions {
+		lintConfig file('lint.xml')
+//		abortOnError false
+	}
+}
+
+dependencies {
+	compile 'com.google.android.gms:play-services-fitness:7.5.0+'
+    compile "com.android.support:appcompat-v7:21.0.3"
+    compile fileTree(dir: 'libs', include: ['*.jar'])
 }

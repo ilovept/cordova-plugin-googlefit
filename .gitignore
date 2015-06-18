@@ -1,0 +1,8 @@
+.*
+*.iml
+node_modules
+/local.properties
+/build
+/src/android/build
+/src/android/gen
+
