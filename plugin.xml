@@ -23,6 +23,7 @@
 		</config-file>
 
 		<source-file src="src/android/java/de/ilpt/plugins/googlefit/GoogleFit.java" target-dir="src/android/java/de/ilpt/plugins/googlefit" />
+		<source-file src="src/android/java/de/ilpt/plugins/googlefit/Connection.java" target-dir="src/android/java/de/ilpt/plugins/googlefit" />
 	</platform>
 
 </plugin>

@@ -1,10 +1,59 @@
 # Cordova plugin for the [Google Fit](https://developers.google.com/fit/) (SDK)
 
-Status: WIP
+Status: WIP, checkout API section
 
 **TODO**
 
 [ ] Check if we can simplify the gradle-extras script and extend it automatically with a cordova plugin.xml option.
+
+
+## Status / API
+
+The current WIP project contains methods to connect via OAuth to Google Fit and support
+methods to read the user weight and height.
+
+**Connect:**
+
+Success callback was always called with 'OK'.
+
+Error callback was called with an error string.
+
+	navigator.googlefit.connect(function() {
+		console.info('Connected successfully!');
+	}, function() {
+		console.warn('Connection failed:', error);
+	});
+
+**Read weight:**
+
+TODO: Options could be used to get the weight for a specific date (from, to). Always just the latest result was returned.
+
+Success callback contains an weight object. DOES NOT MATCH HEALTHKIT API YET.
+
+Error callback was called with an error string.
+
+	navigator.googlefit.readWeight({}, function(weight) {
+		console.info(weight);
+	}, function(error) {
+		console.warn('Read weight failed:', error);
+	});
+
+**Read height:**
+
+TODO: Options could be used to get the height for a specific date (from, to). Always just the latest result was returned.
+
+Success callback contains an height object. DOES NOT MATCH HEALTHKIT API YET.
+
+Error callback was called with an error string.
+
+	navigator.googlefit.readHeight({}, function(height) {
+		console.info(heiht);
+	}, function(error) {
+		console.warn('Read height failed:', error);
+	});
+
+
+See also [www/googlefit.js](https://github.com/ilovept/cordova-plugin-googlefit/blob/master/www/googlefit.js)
 
 
 ## Requirements
